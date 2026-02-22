@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <limits.h>
+
+int main() {
+    int N,found=0;
+    scanf("%d",&N);
+    int arr[N];
+    for(int i=0;i<N;i++){
+        scanf("%d",&arr[i]);
+    }
+    int max=INT_MIN;
+    int maxtu=INT_MIN;
+    for(int j=0;j<N;j++){
+        if(arr[j]>max){
+            max=arr[j];
+        }
+    }
+    for(int i=0;i<N;i++){
+        if(arr[i]!=max && maxtu<arr[i]){
+            maxtu=arr[i];
+            found=1;
+        }
+    }
+    if(found==1){
+        printf("%d",maxtu);
+        
+    }
+    else{
+        printf("No second largest element");
+    }
+    return 0;
+}

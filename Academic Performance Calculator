@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int m1,m2,m3,m4,m5,total;
+    float avg,per;
+    scanf("%d%d%d%d%d",&m1,&m2,&m3,&m4,&m5);
+    total=m1+m2+m3+m4+m5;
+    avg=total/5;
+    per=(total/500.0)*100;
+    printf("%d %.2f %.2f",total,avg,per);
+    return 0;
+}

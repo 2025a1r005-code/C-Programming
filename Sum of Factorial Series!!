@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int factorial(int num){
+    int fact=1;
+    for(int i=1;i<=num;i++){
+        fact=fact*i;
+    }
+        return fact;
+}
+int sumoffactorial(int num){
+    int sum=0;
+    for(int i=1;i<=num;i++){
+        sum=sum+factorial(i);
+    }
+    return sum;
+}
+int main() {
+    int n;
+    scanf("%d",&n);
+    printf("%d",sumoffactorial(n));
+    return 0;
+}

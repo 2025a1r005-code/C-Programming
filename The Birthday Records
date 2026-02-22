@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    struct date{
+        int day;
+        int month;
+        int year;
+    };
+    struct student{
+        char name[50];
+        struct date dob;
+    };
+    struct student s;
+    scanf( "%[^\n]%*c",s.name);
+    scanf("%d",&s.dob.day);
+    scanf("%d",&s.dob.month);
+    scanf("%d",&s.dob.year);
+    printf("Name: %s\n",s.name);
+    printf("Date of Birth: %d/%d/%d",s.dob.day,s.dob.month,s.dob.year);
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+    int N;
+    scanf("%d",&N);
+    int arr[N],brr[N];
+    for(int i=0;i<N;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<N;i++){
+        scanf("%d",&brr[i]);
+    }
+    int *x=arr;
+    int *y=brr;
+    for(int i=0;i<N;i++){
+        *(x+i)=*(x+i)+*(y+i);
+        *(y+i)=*(x+i)-*(y+i);
+        *(x+i)=*(x+i)-*(y+i);
+    }
+    for(int i=0;i<N;i++){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    for(int i=0;i<N;i++){
+        printf("%d ",brr[i]);
+    }
+    return 0;
+}

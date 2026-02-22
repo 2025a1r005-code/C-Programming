@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main(){
+    int N;
+    scanf("%d",&N);
+    int a=0;
+    int b=1;
+    int sum;
+    if(N>=1){
+        printf("%d ",a);
+    }
+    if(N>=2){
+        printf("%d ",b);
+    }
+    for(int i=3;i<=N;i++){
+        sum=a+b;
+         printf("%d ",sum);
+        a=b;
+        b=sum;
+    }
+        return 0;
+}

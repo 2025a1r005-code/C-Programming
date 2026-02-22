@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    char x;
+    int n;
+    float r;
+    double t;
+    scanf("%c",&x);
+    scanf("%d",&n);
+    scanf("%f",&r);
+    scanf("%lf",&t);
+    printf("%c %d %.2f %lf",x,n,r,t);
+    
+    return 0;
+}

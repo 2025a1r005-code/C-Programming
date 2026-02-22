@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int arr[N];
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int result[N];
+    int res_size = 0;
+
+    for (int i = 0; i < N; i++) {
+        int is_duplicate = 0;
+       
+        for (int j = 0; j < res_size; j++) {
+            if (arr[i] == result[j]) {
+                is_duplicate = 1;
+                break;
+            }
+        }
+
+       
+        if (!is_duplicate) {
+            result[res_size] = arr[i];
+            res_size++;
+        }
+    }
+
+    if (res_size == 0) {
+        printf("No elements left\n");
+    } else {
+        for (int i = 0; i < res_size; i++) {
+            printf("%d", result[i]);
+            if (i < res_size - 1) printf(" ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

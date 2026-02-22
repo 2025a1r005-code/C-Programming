@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N,i,j,k,nst;
+    scanf("%d",&N);
+    nst=1;
+    for(i=1;i<=N;i=i+1){
+        for(j=1;j<=N-i;j++){
+            printf("  ");
+        }
+        for(k=1;k<=nst;k++){
+            printf("* ");
+        }
+        nst=nst+2;
+        printf("\n");
+    }
+    return 0;
+}

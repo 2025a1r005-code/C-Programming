@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N,firstdigit,lastdigit;
+    scanf("%d",&N);
+    lastdigit=N%10;
+    while(N>=10){
+        N=N/10;
+    }
+    firstdigit=N;
+    printf("%d %d",firstdigit,lastdigit);
+    return 0;
+}
